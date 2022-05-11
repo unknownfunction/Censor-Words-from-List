@@ -1,0 +1,12 @@
+def censor_string(txt, lst, char):
+    txt = txt.split(' ')
+    answer = ''
+    for item in txt:
+        if item in lst:
+            answer += char * len(item) + ' '
+        else:
+            answer += item + ' '
+
+    print(answer)
+
+censor_string("Today is a Wednesday!", ["Today", "a"], "-")
